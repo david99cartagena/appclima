@@ -14,7 +14,7 @@ Herramientas utilizadas
 > git clone https://github.com/david99cartagena/appclima.git
 
 ## ( Obligatorio )
-Iniciar proyecto o ejecutarlo con un navegador predeterminado. Navegue a `http://localhost/appclima/ `. La aplicación se recargará automáticamente si cambia cualquiera de los archivos de origen.
+Iniciar proyecto o ejecutarlo con un navegador predeterminado. Navegue a `http://localhost/appclima/`. La aplicación se recargará automáticamente si cambia cualquiera de los archivos de origen.
 
 # Url local
 puerto por defecto http://127.0.0.1:80
@@ -34,7 +34,7 @@ Imagenes:
 > Vista de navegador
 
 ![](https://raw.githubusercontent.com/david99cartagena/appclima/main/imagenes/Screenshot_3.png)
-> Vista de mobil
+> Vista de movil
 
 ![](https://raw.githubusercontent.com/david99cartagena/appclima/main/imagenes/Screenshot_4.png)
 > Ejemplo de busqueda
@@ -46,4 +46,4 @@ Imagenes:
 > Ejemplo de busqueda
 
 ![](https://raw.githubusercontent.com/david99cartagena/appclima/main/imagenes/Screenshot_7.png)
-> Vista mobil con navegador mozilla
+> Vista movil con navegador mozilla

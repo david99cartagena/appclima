@@ -1,6 +1,7 @@
 <?php
 
 $key_api = "8eedc7ec90bc0cc93698a87d19c59fd7";
+$citySearch = null;
 $namecity = array("Orlando", "Miami", "New York City");
 
 ?>
@@ -22,7 +23,6 @@ $namecity = array("Orlando", "Miami", "New York City");
                 <label for="citySearch"></label>
                 <input class="form-control me-2" type="text" name="citySearch" value="" placeholder="Buscar Cuidad o Pais" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit" name="button">Buscar</button>&nbsp;
-                <button type="button" class="btn btn-outline-secondary">Agregar</button>
             </form>
         </div>
     </nav>
@@ -36,8 +36,15 @@ $namecity = array("Orlando", "Miami", "New York City");
 
                 <?php
 
-                $resultCitySearch = $_POST["citySearch"];
+                $resultCitySearch = "bogota";
+
+                if (isset($_POST["citySearch"])) :
+                    $resultCitySearch = $_POST["citySearch"];
+                endif;
+
                 $owApiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" . $resultCitySearch . "&appid=" . $key_api;
+
+
 
                 /* Curl connection */
                 $ch = curl_init();
@@ -52,6 +59,7 @@ $namecity = array("Orlando", "Miami", "New York City");
 
                 /* Decode and check cod */
                 $data = json_decode($response);
+
                 if ($data->cod != 200) exit("An error has occurred: " . $data->message);
 
                 ?>
@@ -91,8 +99,9 @@ $namecity = array("Orlando", "Miami", "New York City");
 
         <div class="col">
             <div class="card h-80">
-                <!-- <img src="http://openweathermap.org/img/w/<?php echo $data->weather[0]->icon; ?>.png" class="rounded mx-auto d-block" alt="100" width="100" height="100"> -->
+
                 <div class="card-body">
+                    <!-- <img src="http://openweathermap.org/img/w/<?php echo $datos->weather[0]->icon; ?>.png" class="rounded mx-auto d-block" alt="100" width="100" height="100"> -->
 
                     <?php
                     if (isset($resultCitySearch)) {
@@ -217,21 +226,6 @@ $namecity = array("Orlando", "Miami", "New York City");
                     <?= "<p class=card-title>Temp max : {$temp_max}</p>" ?>
                     <?= "<h4 class=card-title>Humedad : {$humidity}</h4>" ?>
 
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row row-cols-1 row-cols-md-3 g-4 d-flex p-3 justify-content-center">
-        <div class="col">
-            <div class="card h-80">
-                <h3 class="card-title text-center">History</h3>
-                <div class="card-body">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">An item</li>
-                        <li class="list-group-item">A second item</li>
-                        <li class="list-group-item">A third item</li>
-                    </ul>
                 </div>
             </div>
         </div>
