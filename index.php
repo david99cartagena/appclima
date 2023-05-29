@@ -44,8 +44,6 @@ $namecity = array("Orlando", "Miami", "New York City");
 
                 $owApiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" . $resultCitySearch . "&appid=" . $key_api;
 
-
-
                 /* Curl connection */
                 $ch = curl_init();
                 curl_setopt($ch, CURLOPT_HEADER, 0);
@@ -79,9 +77,10 @@ $namecity = array("Orlando", "Miami", "New York City");
                         $latitudeCity = $datos[0]["lat"];
                         $longitudeCity = $datos[0]["lon"];
 
-                        $name2 = $datos[1]["name"];
-                        $lat2 = $datos[1]["lat"];
-                        $lon2 = $datos[1]["lon"];
+                        $nameCity2 = $datos[1]["name"];
+                        $latitudeCity2 = $datos[1]["lat"];
+                        $longitudeCity2 = $datos[1]["lon"];
+                        
                     }
                     ?>
 
@@ -89,9 +88,9 @@ $namecity = array("Orlando", "Miami", "New York City");
                     <?= "<p class=card-text>Latitud : {$latitudeCity}</p>" ?>
                     <?= "<p class=card-text>Longitud : {$longitudeCity}</p>" ?>
 
-                    <?= "<h2 class=card-title>Ciudad : {$name2}</h2>" ?>
-                    <?= "<p class=card-text>Latitud : {$lat2}</p>" ?>
-                    <?= "<p class=card-text>Longitud : {$lon2}</p>" ?>
+                    <?= "<h2 class=card-title>Ciudad : {$nameCity2}</h2>" ?>
+                    <?= "<p class=card-text>Latitud : {$latitudeCity2}</p>" ?>
+                    <?= "<p class=card-text>Longitud : {$longitudeCity2}</p>" ?>
 
                 </div>
             </div>
@@ -100,11 +99,15 @@ $namecity = array("Orlando", "Miami", "New York City");
         <div class="col">
             <div class="card h-80">
 
+                <!-- <img src="http://openweathermap.org/img/w/
+                <?php echo $datos->weather[0]->icon; ?>.png"
+                class="rounded mx-auto d-block" alt="100" width="100" height="100"> -->
                 <div class="card-body">
-                    <!-- <img src="http://openweathermap.org/img/w/<?php echo $datos->weather[0]->icon; ?>.png" class="rounded mx-auto d-block" alt="100" width="100" height="100"> -->
+
 
                     <?php
                     if (isset($resultCitySearch)) {
+
                         $url = "http://api.openweathermap.org/geo/1.0/direct?q=" . $namecity[0] . "&limit=2&appid=" . $key_api;
 
                         $json = file_get_contents($url);
@@ -120,7 +123,7 @@ $namecity = array("Orlando", "Miami", "New York City");
                         $json2 = file_get_contents($url2);
                         $datos2 = json_decode($json2, true);
 
-                        $name = $datos2["name"];
+
                         $temp = $datos2["main"]["temp"];
                         $temp_min = $datos2["main"]["temp_min"];
                         $temp_max = $datos2["main"]["temp_max"];
@@ -132,23 +135,23 @@ $namecity = array("Orlando", "Miami", "New York City");
                     <?= "<p class=card-text>Latitud : {$latitudeCity}</p>" ?>
                     <?= "<p class=card-text>Longitud : {$longitudeCity}</p>" ?>
 
-                    <?= "<h3 class=card-title>Ciudad : {$name}</h3>" ?>
+
                     <?= "<p class=card-title>Temperatura : {$temp}</p>" ?>
                     <?= "<p class=card-title>Temp min : {$temp_min}</p>" ?>
                     <?= "<p class=card-title>Temp max : {$temp_max}</p>" ?>
-                    <?= "<h4 class=card-title>Humedad : {$humidity}</h4>" ?>
-
+                    <?= "<h3 class=card-title>Humedad : {$humidity}</h3>" ?>
                 </div>
             </div>
         </div>
 
         <div class="col">
             <div class="card h-80">
-                <!-- <img src="http://openweathermap.org/img/w/<?php echo $data->weather[0]->icon; ?>.png" class="rounded mx-auto d-block" alt="100" width="100" height="100"> -->
+                <!-- <img src="http://openweathermap.org/img/w/<?php echo $datos->weather[0]->icon; ?>.png" class="rounded mx-auto d-block" alt="100" width="100" height="100"> -->
                 <div class="card-body">
 
                     <?php
                     if (isset($resultCitySearch)) {
+
                         $url = "http://api.openweathermap.org/geo/1.0/direct?q=" . $namecity[1] . "&limit=2&appid=" . $key_api;
 
                         $json = file_get_contents($url);
@@ -164,7 +167,7 @@ $namecity = array("Orlando", "Miami", "New York City");
                         $json2 = file_get_contents($url2);
                         $datos2 = json_decode($json2, true);
 
-                        $name = $datos2["name"];
+
                         $temp = $datos2["main"]["temp"];
                         $temp_min = $datos2["main"]["temp_min"];
                         $temp_max = $datos2["main"]["temp_max"];
@@ -176,23 +179,23 @@ $namecity = array("Orlando", "Miami", "New York City");
                     <?= "<p class=card-text>Latitud : {$latitudeCity}</p>" ?>
                     <?= "<p class=card-text>Longitud : {$longitudeCity}</p>" ?>
 
-                    <?= "<h3 class=card-title>Ciudad : {$name}</h3>" ?>
+
                     <?= "<p class=card-title>Temperatura : {$temp}</p>" ?>
                     <?= "<p class=card-title>Temp min : {$temp_min}</p>" ?>
                     <?= "<p class=card-title>Temp max : {$temp_max}</p>" ?>
-                    <?= "<h4 class=card-title>Humedad : {$humidity}</h4>" ?>
-
+                    <?= "<h3 class=card-title>Humedad : {$humidity}</h3>" ?>
                 </div>
             </div>
         </div>
 
         <div class="col">
             <div class="card h-80">
-                <!-- <img src="http://openweathermap.org/img/w/<?php echo $data->weather[0]->icon; ?>.png" class="rounded mx-auto d-block" alt="100" width="100" height="100"> -->
+                <!-- <img src="http://openweathermap.org/img/w/<?php echo $datos->weather[0]->icon; ?>.png" class="rounded mx-auto d-block" alt="100" width="100" height="100"> -->
                 <div class="card-body">
 
                     <?php
                     if (isset($resultCitySearch)) {
+
                         $url = "http://api.openweathermap.org/geo/1.0/direct?q=" . $namecity[2] . "&limit=2&appid=" . $key_api;
 
                         $json = file_get_contents($url);
@@ -208,7 +211,7 @@ $namecity = array("Orlando", "Miami", "New York City");
                         $json2 = file_get_contents($url2);
                         $datos2 = json_decode($json2, true);
 
-                        $name = $datos2["name"];
+
                         $temp = $datos2["main"]["temp"];
                         $temp_min = $datos2["main"]["temp_min"];
                         $temp_max = $datos2["main"]["temp_max"];
@@ -220,12 +223,11 @@ $namecity = array("Orlando", "Miami", "New York City");
                     <?= "<p class=card-text>Latitud : {$latitudeCity}</p>" ?>
                     <?= "<p class=card-text>Longitud : {$longitudeCity}</p>" ?>
 
-                    <?= "<h3 class=card-title>Ciudad : {$name}</h3>" ?>
+
                     <?= "<p class=card-title>Temperatura : {$temp}</p>" ?>
                     <?= "<p class=card-title>Temp min : {$temp_min}</p>" ?>
                     <?= "<p class=card-title>Temp max : {$temp_max}</p>" ?>
-                    <?= "<h4 class=card-title>Humedad : {$humidity}</h4>" ?>
-
+                    <?= "<h3 class=card-title>Humedad : {$humidity}</h3>" ?>
                 </div>
             </div>
         </div>
