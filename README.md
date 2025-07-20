@@ -1,49 +1,70 @@
-# App Clima
-Aplicacion del clima usando api https://openweathermap.org/api
+# 🌤️ App Clima
 
-## Construido con 🛠️
-Herramientas utilizadas
+Aplicación del clima desarrollada en PHP utilizando la API pública de [OpenWeatherMap](https://openweathermap.org/api).
 
-- [Xampp Server] - version 7.4.27, Servidor Local
-- [Php] - version 7.4.27
-- [VisualStudioCode] - version 1.76.0, Editor de codigo
-- [Git] - version 2.34.1, Sistema de control de versiones
-- [Bootstrap] - version 5.3, Biblioteca multiplataforma o conjunto de herramientas de código abierto para diseño de sitios y aplicaciones web.
+---
 
-# (Obligatorio) Usar
-> git clone https://github.com/david99cartagena/appclima.git
+## 🛠️ Construido con
 
-## ( Obligatorio )
-Iniciar proyecto o ejecutarlo con un navegador predeterminado. Navegue a `http://localhost/appclima/`. La aplicación se recargará automáticamente si cambia cualquiera de los archivos de origen.
+| Herramienta        | Versión | Descripción                                                |
+| ------------------ | ------- | ---------------------------------------------------------- |
+| XAMPP Server       | 7.4.27  | Servidor local con Apache, MySQL y PHP                     |
+| PHP                | 7.4.27  | Lenguaje backend para procesar datos y conectar con la API |
+| Visual Studio Code | 1.76.0  | Editor de código fuente                                    |
+| Git                | 2.34.1  | Sistema de control de versiones                            |
+| Bootstrap          | 5.3     | Framework CSS para diseño responsive y componentes UI      |
 
-# Url local
-puerto por defecto http://127.0.0.1:80
+---
 
-> url para aplicacion http://127.0.0.1:80/appclima/index.php
+## 📦 Clonación del repositorio (Obligatorio)
 
-> url para aplicacion http://localhost/appclima/index.php
+```bash
+git clone https://github.com/david99cartagena/appclima.git
+```
 
-# Imagenes
+---
 
-Imagenes:
+## 🚀 Cómo iniciar el proyecto
 
-![](https://raw.githubusercontent.com/david99cartagena/appclima/main/imagenes/Screenshot_1.png)
-> Ruta de xampp
+1. Asegúrate de tener **XAMPP** instalado y en ejecución (Apache activo).
+2. Coloca la carpeta `appclima` dentro de tu directorio `htdocs`.
+3. Abre tu navegador y navega a:
 
-![](https://raw.githubusercontent.com/david99cartagena/appclima/main/imagenes/Screenshot_2.png)
-> Vista de navegador
+```
+http://localhost/appclima/index.php
+```
 
-![](https://raw.githubusercontent.com/david99cartagena/appclima/main/imagenes/Screenshot_3.png)
-> Vista de movil
+---
 
-![](https://raw.githubusercontent.com/david99cartagena/appclima/main/imagenes/Screenshot_4.png)
-> Ejemplo de busqueda
+## 🌐 URL Local
 
-![](https://raw.githubusercontent.com/david99cartagena/appclima/main/imagenes/Screenshot_5.png)
-> Ejemplo de busqueda
+-   Puerto por defecto: `http://127.0.0.1:80`
+-   Acceso desde navegador:
+    -   [http://localhost/appclima/index.php](http://localhost/appclima/index.php)
+    -   [http://127.0.0.1:80/appclima/index.php](http://127.0.0.1:80/appclima/index.php)
 
-![](https://raw.githubusercontent.com/david99cartagena/appclima/main/imagenes/Screenshot_6.png)
-> Ejemplo de busqueda
+---
 
-![](https://raw.githubusercontent.com/david99cartagena/appclima/main/imagenes/Screenshot_7.png)
-> Vista movil con navegador mozilla
+## 🖼️ Imágenes del Proyecto
+
+### 📂 Ruta en XAMPP
+
+![Ruta XAMPP](https://raw.githubusercontent.com/david99cartagena/appclima/main/imagenes/Screenshot_1.png)
+
+### 🖥️ Vista en Navegador
+
+![Vista navegador](https://raw.githubusercontent.com/david99cartagena/appclima/main/imagenes/Screenshot_2.png)
+
+### 📱 Vista Móvil
+
+![Vista móvil](https://raw.githubusercontent.com/david99cartagena/appclima/main/imagenes/Screenshot_3.png)
+
+### 🔍 Ejemplo de Búsquedas
+
+![Búsqueda ejemplo 1](https://raw.githubusercontent.com/david99cartagena/appclima/main/imagenes/Screenshot_4.png)  
+![Búsqueda ejemplo 2](https://raw.githubusercontent.com/david99cartagena/appclima/main/imagenes/Screenshot_5.png)  
+![Búsqueda ejemplo 3](https://raw.githubusercontent.com/david99cartagena/appclima/main/imagenes/Screenshot_6.png)
+
+### 🌐 Vista móvil en navegador Mozilla
+
+![Vista Mozilla móvil](https://raw.githubusercontent.com/david99cartagena/appclima/main/imagenes/Screenshot_7.png)
